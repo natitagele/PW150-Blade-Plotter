@@ -553,27 +553,46 @@ height:20px;
                               const inputValues = Array.from(inputFields).map(input => parseFloat(input.value));
 
                 // Sort the inputValues array in descending order
-                const sortedValues = inputValues.sort((a, b) => b - a);
+               //  const sortedValues = inputValues.sort((a, b) => b - a);
+               const inputValuesSerial = Array.from(inputFieldsSerial).map(input => input.value);
 
-                // Display the sorted values
-                
+                function sortDescending(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[i]) {
+        // Swap elements using temporary variable
+        let temp = arr[j], tempSerial = inputValuesSerial[j];
+        arr[j] = arr[i];
+        inputValuesSerial[j]  = inputValuesSerial[i]
+        inputValuesSerial[i]= tempSerial;
+        arr[i] = temp;
+      }
+    }
+  }
+  return arr;
+}
 
-                // Create finalOrder array
-                     // Create finalOrder array
-                const finalOrder = new Array(72);
+
+
+const sortedValues = sortDescending(inputValues);
+
+
+                const finalOrder = new Array(72), finalOrderSerial = new Array(72);
               
                
    for (let i = 0; i < 36; i += 2) {
                     finalOrder[i] = sortedValues[i];
                     finalOrder[i + 1] = sortedValues[71 - i];
-                 
+                    finalOrderSerial[i] = inputValuesSerial[i];
+                    finalOrderSerial[i + 1] = inputValuesSerial[71 - i];
                 }
 
                 let k = 0;
                 for (let j = 36; j < 72;) {
                    finalOrder[j] = sortedValues[k + 1];
                    finalOrder[j + 1] = sortedValues[70 - k]
-                    
+                   finalOrderSerial[j] = inputValuesSerial[k+1];
+                   finalOrderSerial[j + 1] = inputValuesSerial[70 - k];
                     k += 2;
                     j += 2
                    }
@@ -584,7 +603,6 @@ height:20px;
    globalFinalOrder = [...finalOrder];
 
  
-   const inputValuesSerial = Array.from(inputFieldsSerial).map(input => input.value);
 
 const rows = 73;
 const cols = 3;
