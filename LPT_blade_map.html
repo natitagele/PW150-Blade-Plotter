@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blade Mapping App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="/logo (2).svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <style>
     
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+      font-family: "Poppins", sans-serif;
+  font-weight: 200;
     background: url('https://prd-sc102-cdn.rtx.com/-/media/pw/newsroom/multimedia/regional-aviation-engines/images/close-up-2_pw150a_qld_p_001.jpg?rev=-1') no-repeat center center fixed;
     
 }
@@ -40,17 +47,16 @@ font-size:16px;
     background-color: royalblue;
     color: white;
     width: 60%;
-    padding:10px;
+    padding:15px;
     margin: 10px auto;
     border-radius: 10px;
     z-index: 100 !important;
 }
 #description
 {
-    font-size:18px;
-    background-color: rgb(158, 162, 175);
+    font-size:16px !important;
     color: rgb(250, 250, 250);
-    width: 40%;
+    width: 60%;
     padding:5px;
     margin:  10px auto;
     border-radius: 5px;
@@ -60,16 +66,20 @@ font-size:16px;
 /* Grid styling */
 form {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(5, 1fr);
     width: 80%;
     margin: auto;
     grid-gap: 10px;
-     background:rgb(3, 32, 112);
 opacity:.75;
 z-index:100;
 padding:30px;
-border-radius: 10px;
-box-shadow: 10px 10px 10px rgb(17, 40, 109,.3);
+border: 1px solid rgba(255, 255, 255, 0.214);
+
+border-radius: 20px;
+background: #0365b0b3 !important;
+box-shadow:  8px 8px 12px #035a9da9,
+         -8px -8px 12px #0370c357;
 
 }
 button{
@@ -89,24 +99,49 @@ input[type="number"] {
 }
 /* Center the submit button */
 button[type="submit"] {
-    grid-column: span 5;
-    height: 70px;
-    font-size: 24px;
-    border-radius: 15px;
+  position: absolute;
+  bottom: -90px;
+  margin-bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+   width: 150px;
+    height: 50px;
+    text-decoration: none;
+    border: none;
+    z-index: 10000;
+    font-size: 20px;
     text-align: center;
+    border-radius: 10px;
+background: #b37904d4 !important;
+
 }
 /* Output display styling */
-
+button[type="submit"]:hover {
+  background-color: rgba(128, 128, 128, 0.425) !important;
+}
 /* Title and description styling */
 #title {
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.214);
+
     font-size: 2em;
     margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+background: #0365b0b3 !important;
+box-shadow:  8px 8px 12px #035a9da9,
+             -8px -8px 12px #0370c357;
 }
 #description {
     text-align: center;
+    padding: 20px;
     font-size: 1.2em;
     margin-bottom: 20px;
+    border-radius: 20px;
+    background: #0a74cb33;
+box-shadow:  8px 8px 12px #035a9d16,
+             -8px -8px 12px #0370c357;
+    border: 1px solid rgba(255, 255, 255, 0.214);
 }
 #titl{
 font-size:16px;
@@ -114,33 +149,79 @@ text-align:center;
 padding:20px;
 width:50%;
 color:white;
-background:green;
+border-radius: 20px;
+background: #8593cc;
+box-shadow:  20px 20px 60px #717dad,
+             -20px -20px 60px #99a9eb;
 margin:auto;}
 .each-input
 {
 display:flex;
 flex-direction:column;
-background-color: royalblue;
-box-shadow: 10px 10px 10px rgb(17, 40, 109,.3);
-border-radius:10px;
+border-radius: 20px;
+border-radius: 20px;
+    background: #0a74cb33;
+box-shadow:  8px 8px 12px #035a9d16,
+             -8px -8px 12px #0370c357;
+    border: 1px solid rgba(255, 255, 255, 0.214);
 
+}
+#info {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  color: white;
+}
+#info div {
+  margin-left: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.214);
+
+  border-radius: 10px;
+  padding: 10px;
+
+
+}
+#info div:first-child{
+  background: #ffffff86 !important;
+  color: #333;
+  text-align: center;
+  width: 120px !important;
+}
+#info div:last-child{
+  background: #0000006f !important;
+  color: #ccc;
+  width: 120px !important;
+  text-align: 
+  center;
 }
 .each-input input 
 {
+
 margin:10px !important;
 border-radius:10px;
 padding:5px 10px;
-border: none;
-box-shadow: 10px 10px 10px rgb(17, 40, 109,.3);
-font-size: 12px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 1px solid white !important;
+box-shadow:  4px 4px 12px #035a9da9,
+             -4px -4px 12px #0370c357;
+             font-size: 12px;
+             color: white !important;
 }
 #input-serial
 {
 width:120px;
+background: #0000006f !important;
+color: #ccc !important;
+
 height:30px;
 }
 #input-number
 {
+  background: #ffffff86 !important;
+  color: #333 !important;
 width:100px;
 height:20px;
 }
@@ -149,216 +230,218 @@ height:20px;
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
-    <div id="title">LPT Blade Mapping Platform</div>
+    <div id="title">LPT Blade Mapper</div>
     <div id="description">Please input LPT blade weights and serial number in every boxes provided below</div>
-    
+    <div id="info"><div>Blade Weight</div> <div>Serial Number </div></div>
     <form id="myForm">
-        <!-- 21 input fields with unique IDs -->
-         <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>       <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>       <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>       <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <div class="each-input">  
-            
-            <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
-          <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
-        </div>
-        <!-- Submit button -->
-        <button type="submit" id="submitBtn">Calculate</button>
-    </form>
+      <!-- 21 input fields with unique IDs -->
+       <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>       <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>       <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>       <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <div class="each-input">  
+          
+          <input type="number" id="input-number"  id="input1" name="input1" step="0.0001" placeholder="blade weight"> 
+        <input type="text"   id="input-serial" name="input1" placeholder="serial-number">  
+      </div>
+      <!-- Submit button -->
+      <button type="submit" id="submitBtn">Submit</button>
+  </form>
+
+ 
 
    
 
@@ -388,24 +471,45 @@ height:20px;
                       {
                           alert('Make sure you have entered all blade weight')
                        }
-                 else if (!allFieldsSerialFilled) {alert("Make sure you have entered every blade's serial number")} else{
-                const inputValues = Array.from(inputFields).map(input => parseFloat(input.value));
-
+                 else if (!allFieldsSerialFilled) {alert("Make sure you have entered every blade's serial number")} else
+                 {
+                  const inputValuesSerial = Array.from(inputFieldsSerial).map(input => input.value);
                 // Sort the inputValues array in descending order
-                const sortedValues = inputValues.sort((a, b) => b - a);
+                const inputValues = Array.from(inputFields).map(input => parseFloat(input.value));
+                function sortDescending(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[i]) {
+        // Swap elements using temporary variable
+        let temp = arr[j], tempSerial = inputValuesSerial[j];
+        arr[j] = arr[i];
+        inputValuesSerial[j]  = inputValuesSerial[i]
+        inputValuesSerial[i]= tempSerial;
+        arr[i] = temp;
+      }
+    }
+  }
+  return arr;
+}
 
+
+
+const sortedValues = sortDescending(inputValues);
                 // Display the sorted values
                 
 
                 // Create finalOrder array
                      // Create finalOrder array
-                const finalOrder = new Array(41);
+                const finalOrder = new Array(41), finalOrderSerial = new Array(41);
+                ;
               
                
                 var sumLeft=0 ,sumRight=0
                 for (let i = 0; i < 20; i += 2) {
                     finalOrder[i] = sortedValues[i];
                     finalOrder[i + 1] = sortedValues[40 - i];
+                    finalOrderSerial[i] = inputValuesSerial[i];
+                    finalOrderSerial[i + 1] = inputValuesSerial[40 - i];
                     sumLeft += sortedValues[i]
                     sumLeft += sortedValues[40-i]
                 }
@@ -415,6 +519,8 @@ height:20px;
                 let k = 0;
                 for (let j = 20; j < 41;) {
                     finalOrder[j] = sortedValues[k + 1];
+                    finalOrderSerial[j] = inputValuesSerial[k+1];
+
                      sumRight += sortedValues[k + 1]
                      
                     if (j < 40) {
@@ -423,6 +529,8 @@ sumRight += sortedValues[39-k]
 }
                     
                    finalOrder[j + 1] = sortedValues[39 - k]
+                   finalOrderSerial[j+1] = inputValuesSerial[39-k];
+
                     }
                     k += 2;
                     j += 2
@@ -431,26 +539,26 @@ console.log(`left:${sumLeft}`, sumRight)
 
               if(sumLeft > sumRight){
                   
-                          finalOrder[40]=sortedValues[20]
-                          console.log('right')
+                          finalOrder[40]=sortedValues[20];
+                          finalOrderSerial[40] = inputValuesSerial[20];
                        } 
               if(sumLeft < sumRight){
-                      console.log('left')
-                  finalOrder.splice(20, 0, sortedValues[20]);
+               finalOrder.splice(20, 0, sortedValues[20]);
                    finalOrder.pop()
+                   finalOrderSerial.splice(20, 0, inputValuesSerial[20]);
+                   finalOrderSerial.pop()
                       }
          
    globalFinalOrder = [...finalOrder];
 
  
-   const inputValuesSerial = Array.from(inputFieldsSerial).map(input => input.value);
-
+ 
 const rows = 42;
 const cols = 3;
 const printableArray= Array.from({ length: rows }, () => Array(cols).fill(null));
 printableArray[0]= ['Blade Position','Serial Number','Blade Weight']
-   
- inputValuesSerial.forEach((value, index)=> {
+   console.log(finalOrderSerial, finalOrder )
+ finalOrderSerial.forEach((value, index)=> {
     printableArray[index+1][0]= index+1;
 printableArray[index+1][1]= value;
 printableArray[index+1][2]= globalFinalOrder[index];

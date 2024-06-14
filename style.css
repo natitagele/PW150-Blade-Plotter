@@ -1,5 +1,7 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 body {
@@ -35,11 +37,13 @@ body::before {
     box-shadow: 10px 10px 20px rgba(0,0,0,.2);
 }
 #center {
-    padding: 20px;
-    background-color: rgba(240, 255, 255, 0.389);
+    padding: 30px;
+    
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(0,0,0,.2);
+    border-radius: 20px;
+    background: #0365b0b3 !important;
+    box-shadow:  8px 8px 12px #035a9d5c,
+             -8px -8px 12px #0370c322;
     margin: 0 20px;
 }
 .center div {
@@ -56,19 +60,16 @@ body::before {
 }
 h1 {
     font-size: 40px;
-    color: wheat;
-    font-weight: 300;
+    color: rgb(250, 250, 250);
 }
 h3
 {
     color: rgb(255, 255, 255);
 
     font-size: 25px;
-    font-weight: 300;
 }
 .center a {
     text-decoration: none;
-    font-weight: 300 !important;
 
 }
 .lpt {
